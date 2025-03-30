@@ -21,3 +21,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "FlagMaster"
 include(":app")
+include(":core")

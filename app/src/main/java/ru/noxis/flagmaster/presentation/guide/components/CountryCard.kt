@@ -27,7 +27,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.PreviewLightDark
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import ru.noxis.flagmaster.R
+import ru.noxis.core.R
 import ru.noxis.flagmaster.domain.Сountry
 import ru.noxis.flagmaster.ui.theme.FlagMasterTheme
 

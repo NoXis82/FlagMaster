@@ -36,7 +36,7 @@
     <string name="belgium">Бельгия</string>
     <string name="belgium_capital">Брюссель</string>
     <string name="benin">Бенин</string>
-    <string name="benin_capital">Порто-Ново, Котону\n(резиденция президента, правительства и иностранные посольства.)</string>
+    <string name="benin_capital">Порто-Ново, Котону</string>
     <string name="bulgaria">Болгария</string>
     <string name="bulgaria_capital">София</string>
     <string name="bolivia">Боливия</string>
@@ -94,7 +94,7 @@
     <string name="greece">Греция</string>
     <string name="greece_capital">Афины</string>
     <string name="georgia">Грузия</string>
-    <string name="georgia_capital">Тбилиси, Кутаиси (законодательная)</string>
+    <string name="georgia_capital">Тбилиси, Кутаиси</string>
     <string name="denmark">Дания</string>
     <string name="denmark_capital">Копенгаген</string>
     <string name="djibouti">Джибути</string>
@@ -232,7 +232,7 @@
     <string name="namibia">Намибия</string>
     <string name="namibia_capital">Виндхук</string>
     <string name="nauru">Науру</string>
-    <string name="nauru_capital">Официальной столицы нет, правительство расположено в округе Ярен</string>
+    <string name="nauru_capital">Официальной столицы нет</string>
     <string name="nepal">Непал</string>
     <string name="nepal_capital">Катманду</string>
     <string name="niger">Нигер</string>

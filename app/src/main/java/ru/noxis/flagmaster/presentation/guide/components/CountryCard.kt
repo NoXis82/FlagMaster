@@ -22,19 +22,21 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.RectangleShape
-import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.PreviewLightDark
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import ru.noxis.core.R
-import ru.noxis.flagmaster.domain.Сountry
+import ru.noxis.core.domain.CountryInfo
+import ru.noxis.core.domain.enum.Сountries
+import ru.noxis.core.util.asUiPainter
+import ru.noxis.core.util.asUiTextCapitalName
+import ru.noxis.core.util.asUiTextCountryName
 import ru.noxis.flagmaster.ui.theme.FlagMasterTheme
 
 @Composable
 fun CountryCard(
     modifier: Modifier = Modifier,
-    country: Сountry,
+    country: CountryInfo,
 ) {
     OutlinedCard(
         colors = CardDefaults.cardColors(
@@ -54,7 +56,7 @@ fun CountryCard(
                 modifier = Modifier
                     .size(width = 102.dp, height = 70.dp)
                     .border(1.dp, color = textColor, shape = RectangleShape),
-                painter = painterResource(R.drawable.flag_of_russia),
+                painter = country.flagIcon.asPainter(),
                 contentDescription = null
             )
             Column(
@@ -62,12 +64,12 @@ fun CountryCard(
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
                 Text(
-                    text = country.name,
+                    text = country.nameCountry.asString(),
                     fontSize = 32.sp,
                     textAlign = TextAlign.Center,
                 )
                 Text(
-                    text = "(${country.capitalCity})",
+                    text = "(${country.capitalCountry.asString()})",
                     fontSize = 16.sp,
                     textAlign = TextAlign.Center,
                 )
@@ -84,10 +86,11 @@ private fun CountryCardPreview() {
             (1..10).forEach {
                 item {
                     CountryCard(
-                        country = Сountry(
-                            id = 0L,
-                            name = "Россия",
-                            capitalCity = "Москва"
+                        country = CountryInfo(
+                            flagIcon = Сountries.RU.asUiPainter(),
+                            nameCountry = Сountries.RU.asUiTextCountryName(),
+                            capitalCountry = Сountries.RU.asUiTextCapitalName(),
+                            code = Сountries.RU.name
                         )
                     )
                     Spacer(Modifier.height(8.dp))

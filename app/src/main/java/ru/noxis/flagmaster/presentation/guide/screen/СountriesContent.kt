@@ -60,10 +60,7 @@ fun CountriesContent(modifier: Modifier = Modifier) {
     ) {
 
         HorizontalPager(
-            state = horizontalPagerState,
-            modifier = Modifier
-                .weight(.7f)
-                .padding(top = 32.dp),
+            state = horizontalPagerState
         ) { currentPage ->
 
             val pageOffset = horizontalPagerState.currentPageOffset(currentPage)
@@ -79,10 +76,9 @@ fun CountriesContent(modifier: Modifier = Modifier) {
                 currentPage = currentPage
             )
         }
+        Spacer(Modifier.height(32.dp))
         Box(
-            modifier = Modifier
-                .fillMaxWidth()
-                .weight(.3f),
+            modifier = Modifier.fillMaxWidth(),
             contentAlignment = Alignment.Center
         ) {
             VerticalPager(
@@ -91,7 +87,7 @@ fun CountriesContent(modifier: Modifier = Modifier) {
                 userScrollEnabled = false,
                 horizontalAlignment = Alignment.CenterHorizontally
             ) { page ->
-                CountryInfoView(countries[page])
+              CountryInfoView(countries[page])
             }
 
             LaunchedEffect(Unit) {
@@ -112,10 +108,7 @@ fun CountriesContent(modifier: Modifier = Modifier) {
 private fun PagerScope.CountryInfoView(
     country: CountryInfo
 ) {
-    Column(
-        modifier = Modifier.fillMaxSize(),
-        verticalArrangement = Arrangement.Center,
-    ) {
+    Column {
         Text(
             text = country.nameCountry.asString(),
             style = MaterialTheme.typography.titleLarge.copy(

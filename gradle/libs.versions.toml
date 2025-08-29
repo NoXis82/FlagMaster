@@ -17,8 +17,8 @@ hilt = "2.52"
 hiltNavigationCompose = "1.2.0"
 ksp = "2.0.21-1.0.28"
 room = "2.6.1"
-navigationVersion = "2.8.5"
-
+navigationVersion = "2.9.3"
+composeMaterial = "1.9.0"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -51,6 +51,7 @@ room-compiler = { group = "androidx.room", name = "room-compiler", version.ref =
 room-ktx = { group = "androidx.room", name = "room-ktx", version.ref = "room" }
 #Navigation
 navigation-compose = { module = "androidx.navigation:navigation-compose", version.ref = "navigationVersion" }
+compose-material = { module = "androidx.compose.material:material", version.ref = "composeMaterial" }
 
 
 [plugins]

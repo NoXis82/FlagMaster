@@ -61,6 +61,7 @@ dependencies {
     implementation(libs.hilt.navigation.compose)
     //Navigation
     implementation(libs.navigation.compose)
+    implementation(libs.compose.material)
 
     implementation(libs.kotlinx.serialization.json)
 

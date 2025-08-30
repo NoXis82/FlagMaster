@@ -52,7 +52,7 @@ import kotlin.math.absoluteValue
 @Composable
 fun CountriesContent(modifier: Modifier = Modifier) {
     val viewModel: СountriesViewModel = hiltViewModel()
-    val countries by viewModel.countries.collectAsState(emptyList())
+    val countries by viewModel.countries.collectAsState()
     val horizontalPagerState = rememberPagerState(pageCount = { countries.size })
     val verticalPagerState = rememberPagerState(pageCount = { countries.size })
 

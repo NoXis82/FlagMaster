@@ -13,9 +13,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.LocalContentColor
-import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedCard
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -36,8 +34,8 @@ import ru.noxis.flagmaster.ui.theme.FlagMasterTheme
 
 @Composable
 fun CountryCard(
-    modifier: Modifier = Modifier,
     country: CountryInfo,
+    modifier: Modifier = Modifier,
 ) {
     OutlinedCard(
         border = BorderStroke(1.dp, Color.Black),

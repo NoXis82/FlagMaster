@@ -8,7 +8,6 @@ import androidx.compose.material.BottomNavigation
 import androidx.compose.material.BottomNavigationItem
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Scaffold
-import androidx.compose.material3.TextField
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
@@ -73,9 +72,9 @@ fun NavigateRoot() {
                 navController = navController,
                 startDestination = Route.ListContent
             ) {
-                listScreen(navController, innerPadding)
-                cardScreen(navController, innerPadding)
-                brainScreen(navController, innerPadding)
+                listScreen(innerPadding)
+                cardScreen(innerPadding)
+                memoryScreen(innerPadding)
             }
         }
     )

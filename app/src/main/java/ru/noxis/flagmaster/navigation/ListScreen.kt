@@ -7,13 +7,11 @@ import androidx.navigation.NavGraphBuilder
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.composable
 import ru.noxis.core.navigation.Route
-import ru.noxis.flagmaster.presentation.guide.screen.CountriesListContent
+import ru.noxis.flagmaster.presentation.guide.screen.CountriesContent
+import ru.noxis.flagmaster.presentation.guide.screen.CountriesPagerContent
 
-fun NavGraphBuilder.listScreen(
-    navController: NavHostController,
-    innerPadding: PaddingValues
-) {
+fun NavGraphBuilder.listScreen(innerPadding: PaddingValues) {
     composable<Route.ListContent> {
-        CountriesListContent(modifier = Modifier.padding(innerPadding))
+        CountriesContent(modifier = Modifier.padding(innerPadding))
     }
 }

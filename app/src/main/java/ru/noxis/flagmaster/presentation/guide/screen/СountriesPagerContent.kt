@@ -43,15 +43,15 @@ import ru.noxis.core.domain.enum.Сountries
 import ru.noxis.core.util.asUiPainter
 import ru.noxis.core.util.asUiTextCapitalName
 import ru.noxis.core.util.asUiTextCountryName
-import ru.noxis.flagmaster.presentation.guide.viewmodel.СountriesViewModel
+import ru.noxis.flagmaster.presentation.guide.viewmodel.CountriesViewModel
 import ru.noxis.flagmaster.ui.theme.FlagMasterTheme
 import ru.noxis.flagmaster.utils.currentPageOffset
 import ru.noxis.flagmaster.utils.lerp
 import kotlin.math.absoluteValue
 
 @Composable
-fun CountriesContent(modifier: Modifier = Modifier) {
-    val viewModel: СountriesViewModel = hiltViewModel()
+fun CountriesPagerContent(modifier: Modifier = Modifier) {
+    val viewModel: CountriesViewModel = hiltViewModel()
     val countries by viewModel.countries.collectAsState()
     val horizontalPagerState = rememberPagerState(pageCount = { countries.size })
     val verticalPagerState = rememberPagerState(pageCount = { countries.size })

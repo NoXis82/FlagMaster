@@ -16,11 +16,11 @@ sealed interface Route {
     data object CardsContent: Route
 
     @Serializable
-    data object BrainContent: Route
+    data object MemoryContent: Route
 }
 
 val topLevelRoutes = listOf(
     TopLevelRoute("ListContent", Route.ListContent, R.drawable.ic_list_check),
     TopLevelRoute("CardsContent", Route.CardsContent, R.drawable.ic_cards),
-    TopLevelRoute("BrainContent", Route.BrainContent, R.drawable.ic_question)
+    TopLevelRoute("BrainContent", Route.MemoryContent, R.drawable.ic_question)
 )

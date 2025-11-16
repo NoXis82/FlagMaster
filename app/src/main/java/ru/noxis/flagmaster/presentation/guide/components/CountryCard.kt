@@ -38,7 +38,7 @@ fun CountryCard(
     modifier: Modifier = Modifier,
 ) {
     OutlinedCard(
-        border = BorderStroke(1.dp, Color.Black),
+        border = BorderStroke(1.dp, color = Color.Gray),
         modifier = modifier.fillMaxWidth()
     ) {
         Row(
@@ -53,7 +53,7 @@ fun CountryCard(
                     .size(width = 102.dp, height = 70.dp)
                     .border(1.dp, color = textColor, shape = RectangleShape),
                 painter = country.flagIcon.asPainter(),
-                contentDescription = null
+                contentDescription = "flag icon"
             )
             Spacer(Modifier.width(4.dp))
             Column(
@@ -80,7 +80,7 @@ fun CountryCard(
 private fun CountryCardPreview() {
     FlagMasterTheme {
         LazyColumn(contentPadding = PaddingValues(16.dp)) {
-            (1..10).forEach {
+            (1..10).forEach { _ ->
                 item {
                     CountryCard(
                         country = CountryInfo(

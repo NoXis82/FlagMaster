@@ -40,7 +40,7 @@ class CountriesViewModel @Inject internal constructor(
         .debounce(500L)
         .onEach { updateUIState { copy(isSearching = true) } }
         .combine(_countries) { text, countries ->
-            if (text.isBlank()) {
+            if (text.isBlank() || text.isEmpty()) {
                 countries
             } else {
                 delay(1000L)
